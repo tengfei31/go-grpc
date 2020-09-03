@@ -1,10 +1,3 @@
-/*
- * @Author: wtf
- * @Date: 2020-09-02 14:45:10
- * @LastEditors: wtf
- * @LastEditTime: 2020-09-02 17:08:56
- * @Description: plase write Description
- */
 package main
 
 import (
@@ -15,7 +8,6 @@ import (
 
 	pb "go-grpc/proto"
 )
-
 
 //rpc接收结构
 type SearchService struct{}
@@ -32,7 +24,7 @@ func main() {
 	server := grpc.NewServer()
 	pb.RegisterSearchServiceServer(server, &SearchService{})
 
-	lis, err := net.Listen("tcp", ":" + PORT)
+	lis, err := net.Listen("tcp", ":"+PORT)
 	if err != nil {
 		log.Fatalf("net.Listen err: %v", err)
 	}
