@@ -77,7 +77,7 @@ func (s *StreamService) Route(stream pb.StreamService_RouteServer) error {
 			return err
 		}
 		n++
-		log.Printf("stream.Recv pt.name: %s, pt.value: %d", r.Pt.Name, r.Pt.Value)
+		log.Printf("stream.Recv pt.name : %s, pt.value : %d", r.Pt.Name, r.Pt.Value)
 	}
 	return nil
 }
